@@ -4,6 +4,8 @@
 
   $cache_file = 'gimage/'.md5($query).'.jpg';
 
+  if (!is_dir('gimage')) mkdir('gimage');
+
   if (file_exists($cache_file))
   {
         Header('Location:/'.$cache_file);
